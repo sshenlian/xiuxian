@@ -6,7 +6,7 @@ include $path."config/mysql_conn.php";
 
 if(isset($_GET['name'])){
 	$name = $_GET['name'];
-	$sql = "select * from News where username='$name'";
+	$sql = "select * from users where username='$name'";
 	$result = mysqli_query($conn, $sql);
 	if (@mysqli_num_rows($result) > 0) {
 	// 输出数据
@@ -31,6 +31,7 @@ if(isset($_GET['name'])){
 		<p>请输入学生姓名查询档案</p>
 		<input type="text" class="form-control" style="width: 150px;" name="name">
 		<input type="submit" name="tj" class="btn btn-default" value="查询档案">
+		<h5>tips:name shenlian mask zhangfei</h5>
 	</form>
 	<? echo $status?>
 </body>
