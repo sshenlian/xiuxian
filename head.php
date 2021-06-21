@@ -38,7 +38,7 @@ if(!isset($style)){
     				<li><a href="<? echo $path?>wiki/">XSS漏洞文档学习</a></li>
 	    			<li><a href="<? echo $path?>bug/xss/xss_reflection.php?messages=http://www.baidu.com">XSS反射</a></li>
 	      			<li><a href="<? echo $path?>bug/xss/xss_stored_index.php">XSS存储</a></li>
-	      			<li><a href="#">XSS-DOM</a></li>
+	      			<li><a href="<? echo $path?>bug/xss/xss_dom.php">XSS-DOM</a></li>
    				</ul>
 		  </li>
 
