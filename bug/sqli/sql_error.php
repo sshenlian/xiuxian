@@ -29,6 +29,6 @@ include $path."config/mysql_conn.php";
 		<input type="text" class="form-control" style="width: 150px;" name="search">
 		<input type="submit" name="tj" class="btn btn-default" value="搜索内容">
 	</form>
-	<? echo $status?>
+	<?php echo $status?>
 </body>
 </html>

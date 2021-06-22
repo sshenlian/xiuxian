@@ -28,7 +28,7 @@ include $path."config/mysql_conn.php";
 		<p>搜索：</p>
 		<input type="text" id="search" class="form-control" onkeyup="showHint(this.value)" style="width: 150px;" name="search"></form>
 		<input type="submit" class="btn btn-default navbar-btn" value="搜索">
-	<? echo $status?>
+	<?php echo $status?>
 </body>
 </html>
 

@@ -43,6 +43,6 @@ if(isset($_POST['submit'])){
   </div>
   <button type="submit" name="submit" value="tj" class="btn btn-default">登录</button>
 </form>
-	<? echo $status?>
+	<?php echo $status?>
 </body>
 </html>

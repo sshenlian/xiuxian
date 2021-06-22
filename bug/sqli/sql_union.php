@@ -33,6 +33,6 @@ if(isset($_GET['name'])){
 		<input type="submit" name="tj" class="btn btn-default" value="查询档案">
 		<h5>tips:name shenlian mask zhangfei</h5>
 	</form>
-	<? echo $status?>
+	<?php echo $status?>
 </body>
 </html>

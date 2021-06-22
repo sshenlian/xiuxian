@@ -36,7 +36,7 @@ if(isset($name)){
     <input type="text" class="form-control" name="url" placeholder="http://xxxxx.com/123.jpg">
   </div>
   <button type="submit" class="btn btn-default">Submit</button><br/>
-  <? echo $status?>
+  <?php echo $status?>
 </form>
 </body>
 </html>
