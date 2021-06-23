@@ -46,8 +46,8 @@ error_reporting(0);
 		  <li role="presentation">
 		  		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CSRF<span class="caret"></span></a>
     			<ul class="dropdown-menu">
-    				<li><a href="#">CSRF漏洞文档学习</a></li>
-	    			<li><a href="#">CSRF</a></li>
+    				<li><a href="">CSRF漏洞文档学习</a></li>
+	    			<li><a href="<?php echo $path?>bug/csrf/csrf_login.php">CSRF</a></li>
 	      			<li><a href="#">CORS</a></li>
 	      			<li><a href="#">JSONP</a></li>
 	      			<li><a href="#">self-xss 组合 CSRF</a></li>

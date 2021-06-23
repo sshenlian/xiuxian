@@ -44,12 +44,14 @@ if(isset($_POST['install'])){
 
 	$sql = "CREATE TABLE admin (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 		username VARCHAR(30) NOT NULL,
-		password VARCHAR(36) NOT NULL
+		password VARCHAR(36) NOT NULL,
+		address VARCHAR(50) NOT NULL,
+		tel VARCHAR(22) NOT NULL
 	)";
 	if(!@mysqli_query($conn,$sql)){
 		die("<p class='container'>数据表创建失败 请检查用户权限</p>");
 	}
-	$sql = "insert into `admin`(`id`,`username`,`password`) VALUES('1','admin',md5('QweAsdZxc'))";
+	$sql = "insert into `admin`(`id`,`username`,`password`,`address`,`tel`) VALUES('1','admin',md5('QweAsdZxc'),'北京 长城','13888888888'),('2','test',md5('666666'),'南京 夫子庙','13837194839')";
 	if(@!mysqli_multi_query($conn,$sql)){
 		die("<p class='container'>插入数据失败！</p>");
 	}

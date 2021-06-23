@@ -33,10 +33,10 @@ if(isset($select)){
 	<title></title>
 </head>
 <body class="container">
-	<div style="display:<? echo $dis?>" >
+	<div style="display:<?php echo $dis?>" >
 	<p><a href="./xss_stored.php">创建小说</a></p>
 	<p><a href="./xss_stored_index.php?status=true&select=1">查看创作</a></p>
 	</div>
-	<? echo $stat?>
+	<?php echo $stat?>
 </body>
 </html>

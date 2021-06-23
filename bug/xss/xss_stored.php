@@ -35,6 +35,7 @@ if(isset($name)){
     <label >小说封面地址</label>
     <input type="text" class="form-control" name="url" placeholder="http://xxxxx.com/123.jpg">
   </div>
+  <img src='123123'>
   <button type="submit" class="btn btn-default">Submit</button><br/>
   <?php echo $status?>
 </form>
