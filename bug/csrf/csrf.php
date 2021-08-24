@@ -14,11 +14,12 @@ $act = $_GET['act'];
 switch($act){
     case 'address':
         $addressdis = 'run-in';
-        if(isset($_POST['add'])){
+        if(isset($_POST['uname'])){
             $add = $_POST['add'];
-            $iphone = $_POSTP['tel'];
-            $uname = $_SESSION['user'];
-            $sql = "update admin set address='$add',tel='$uname' where username='$uname'";
+            $iphone = $_POST['tel'];
+            $uname = $_POST['uname'];
+            $sql = "update admin set address='$add',tel='$iphone' where username='$uname'";
+            echo $sql;
             if(mysqli_query($conn,$sql)){
                 $status = "<script>alert('修改成功');location.href='csrf_member.php'</script>";
             }else{
@@ -40,6 +41,9 @@ switch($act){
             }
         }
         break;
+	case 'logut':
+		unset($_SESSION['user']);
+		$status = "<script>location.href='csrf_member.php'</script>";
     default:
         $infodis = 'run-in';
         $userinfo = $_SESSION['user'];
@@ -74,7 +78,7 @@ switch($act){
 
         <div style="display: <?php echo $addressdis?>;">
             <form method="POST" >
-            用户: &nbsp;&nbsp;<?php echo $_SESSION['user'];?><br>
+            用户: &nbsp;&nbsp;<?php echo $_SESSION['user'];?><input type="hidden" name="uname" value="<?php echo $_SESSION['user'];?>"><br>
                 地址：<input type="text" name="add"><br>
                 电话：<input type="text" name="tel"><br>
                 <input type="submit" style="margin-left: 150px;" class="btn btn-default" value="提交">
@@ -89,6 +93,7 @@ switch($act){
                 <?php echo "<br>$status"?>
             </form>
         </div>
+
 
 
 </body>

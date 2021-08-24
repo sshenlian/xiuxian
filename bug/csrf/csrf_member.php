@@ -5,6 +5,15 @@ if (!isset($_SESSION["user"])) {
     header("location:csrf_login.php");
 }
 
+if (@$_SERVER['HTTP_ORIGIN']){
+    header("Access-Control-Allow-Origin: ".$_SERVER['HTTP_ORIGIN']);
+}else{
+    header("Access-Control-Allow-Origin: *");
+}
+header("Access-Control-Allow-Headers: X-Requested-With");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Methods: PUT,POST,GET,DELETE,OPTIONS");
+
 $path = "../../";
 include "../../head.php";
 include $path."config/config.php";
@@ -25,7 +34,7 @@ include $path."config/mysql_conn.php";
         <p><a href="csrf_member.php?act=0">个人中心</a></p>
         <p><a href="csrf_member.php?act=address">修改资料</a></p>
         <p><a href="csrf_member.php?act=pwd">更改密码</a></p>
-        
+        <p><a href="csrf_member.php?act=logut">退出登录</a></p>
     </div>
     <?php include_once "csrf.php";?>
     

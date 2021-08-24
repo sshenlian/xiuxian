@@ -54,6 +54,7 @@ if(isset($user)){
   </div>
   <button type="submit" name="submit" value="tj" class="btn btn-default">登录</button>
   <?php echo $status;?>
+        <br><br>当前环境存在多个漏洞 csrf core jsonp 越权…
 </form>
 </form>
 </body>
